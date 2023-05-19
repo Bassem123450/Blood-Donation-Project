@@ -1,0 +1,53 @@
+    .car9d {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+    .mynana{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 4%;
+
+    }
+    .mynana img{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowraps;
+
+    }
+    .icon{
+    text-align: center;
+    font-size: 50px;
+    font-family: "Montserrat-Bold";
+    color: #c6414c;
+
+    }
+    .mylove{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 4%;
+    padding-top: 3%;
+    padding-bottom: 4%;
+
+    }
+    .mylove img{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowraps;}
+    .Header{
+    font-family: 'News Cycle', sans-serif;
+    font-size: larger;
+    }
+    .lop{
+    color: #c6414c;
+    }
+    .mytata{
+    box-shadow: 1 1 1 1;
+    }

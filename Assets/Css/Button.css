@@ -1,0 +1,147 @@
+  @font-face {
+  font-family: "NewsCycle-Regular";
+  src: url("../NewsCycle/NewsCycle-Regular.ttf");
+  }
+
+  @font-face {
+  font-family: "NewsCycle-Bold";
+  src: url("../NewsCycle/NewsCycle-Bold.ttf");
+  }
+
+  /* Start Preloader */
+  .loader-bg {
+  position:fixed;
+  z-index:999999;
+  background:#fff;
+  width:100%;
+  height:100%
+  }
+  .loader {
+  border:0 solid transparent;
+  border-radius:50%;
+  width:250px;
+  height:250px;
+  position:absolute;
+  top:calc(50vh - 165px);
+  left:calc(50vw - 126px);
+  }
+  .loader:after,
+  .loader:before {
+  content:'';
+  border:1em solid #c6414c;
+  border-radius:50%;
+  width:inherit;
+  height:inherit;
+  position:absolute;
+  top:0;
+  left:0;
+  animation:loader 2s linear infinite;
+  opacity:0;
+  }
+  .loader:before {
+  animation-delay:.5s
+  }@keyframes loader {
+  0% {
+  transform:scale(0);
+  opacity:0;
+  } 
+  50% {
+  opacity:1
+  }
+  100% {
+  transform:scale(1);opacity:0
+  }
+  }
+  /* End Preloader */
+  /* Start Navbar */
+  .Logo {
+  width: 200px;
+  }
+
+  a:hover {
+  color: #c6414c !important;
+  transition: all .4s ease;
+  }
+
+  .nav-item {
+  padding: 0px 20px;
+  }
+
+  .nav-link {
+  font-family: "NewsCycle-Regular";
+  }
+
+  .login-link {
+  background-color: #c6414c !important;
+  color: white !important;
+  border-radius: 50px !important;
+  width: auto;
+  padding: 12px 40px !important;
+  font-size: 16px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: "NewsCycle-Bold";
+  }
+
+  .login-link:hover {
+  color: white !important;
+  }
+
+  .link {
+  background-color: #c6414c !important;
+  color: white !important;    
+  }
+
+  .link:hover {
+  color: white !important;
+  outline: none;
+  }
+
+  /* End Navbar */
+  @media (min-width: 576px) { 
+  .login-link{
+  width: 25%;
+  }
+  }
+
+  @media (min-width: 768px) { 
+  .login-link{
+  width: 20%;
+  }
+  }
+
+  @media (min-width: 992px) { 
+  .login-link{
+  width: 20%;
+  }
+  }
+
+  @media (min-width: 576px) And (max-width: 991px){
+  .navbar-collapse ul {
+  display: flex;
+  align-items: center;
+  }
+  .navbar-collapse a{
+  margin: 0 auto;
+  }
+  }
+
+
+  @media (min-width: 1100px) { 
+  .login-link{
+  width: 19%;
+  }
+  }
+
+  @media (min-width: 1200px) { 
+  .login-link{
+  width: 16%;
+  }
+  }
+
+  @media (min-width: 1400px) {  
+  .login-link{
+  width: 14%;
+  } }

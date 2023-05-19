@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Registration</title>
+    <link rel="stylesheet" href="./Assets/Css/admin.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Assets/Images/Logo.png">
+</head>
+<body>
+<div class="regi">
+    <form name="myform" method="post" id="form">
+        <div class="container">
+          <h1>Admin Register</h1>
+          <p>Please fill in this form to create an account</p>
+          <hr>
+          <label for="Name"><b>Admin Name</b></label>
+          <input type="text" placeholder="Enter Name" name="Name" id="Name" required>
+          <br>
+          <label for="User-Name"><b>Admin Username</b></label>
+          <input type="text" placeholder="Enter Username" name="UserName" id="User-Name" required>
+          <label for="email"><b>Admin Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" id="email" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+          <input type="checkbox" onclick="myFunction()"><b>Show Password</b>
+          <br>
+          <br>
+          <label for="psw2"><b>Re-entre Password</b></label>
+          <input type="password" placeholder="Re-enter Password" name="confirm-password" id="psw2" required>
+          <input type="checkbox" onclick="myFunction2()"><b>Show Password</b>
+          <br>
+          <br>
+          <label for="date"><b>Admin Birthdate</b></label>
+          <input type="date" placeholder="Date" name="Date" id="Date" required>
+        <br>
+          <label for="address"><b>Admin Address</b></label>
+          <input type="text" placeholder="Address: Building No. ,Street No. ,City, Governorate,Country." name="address" id="address" required>
+        <br>
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1" required>
+          <input type="radio" name="gender" id="dot-2" required>
+          <label for="gender-title"><b>Gender</b></label>
+        <div class="category">
+          <label for="dot-1">
+          <span class="dot one"></span>
+          <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+          <span class="dot two"></span>
+          <span class="gender">Female</span>
+          </label>
+        </div>
+        <br>
+          <label for="Phone number"><b>Admin Phone Number</b></label>
+          <input type="Phonenumber" placeholder="Phone Number" name="ph.no" id="ph.no" minlength="0" maxlength="11" onkeyup="NumbersOnly(this)" required style="outline: none;">
+        <hr>
+          <p id="Terms-Privacy">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+          <div class="popup-class">
+            <button type="submit" class="registerbtn register" onclick="validateform()">Register</button>
+          </div>
+          <div class="popup" id="popup">
+            <img src="./Assets/Images/checked.png" alt="">
+            <h2>Thank You!</h2>
+            <p>You Are Now One Of Our Admin Memebers<br>You Can Now Do Your Work</p>
+            <a type="button" href="../Admin.html" onclick="closePopup()">Ok</a>
+          </div>
+        </div>
+          <p>Already have an account? <a href="Admin Login.html">Sign In</a>.</p>
+      </form>
+</div>
+    <script src="./Assets/Java Script/admin.js"></script>
+        <script>
+          function validateform() {
+            var Name = document.myform.Name.value;
+            var UserName = document.myform.UserName.value;
+            var email = document.myform.email.value;
+            var psw = document.myform.psw.value;
+            var Date = document.myform.Date.value;
+            var address = document.myform.address.value;
+            var gender = document.myform.gender.value;
+      
+            if (Name == "" || UserName == "" || email == "" || psw == "" || Date == "" || address == "" || gender == "") {
+              alert("Please Complete All The Required Data To Submit");
+            }
+            else {
+              var popup = document.getElementById("popup");
+              function openPopup() {
+                console.log("hello")
+                popup.classList.add("open-popup");
+      
+              }
+              var registerBtn = document.querySelector(".register");
+              var form = document.querySelector("#form")
+              registerBtn.addEventListener("click", function (e) {
+                e.preventDefault()
+                console.log("submited")
+                console.log(form)
+      
+                popup.classList.add("open-popup");
+              })
+              function closePopup() {
+                popup.classList.remove("open-popup");
+              }
+            }
+          }
+        </script>
+    </body>
+</html>

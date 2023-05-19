@@ -1,0 +1,311 @@
+    @import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap');
+    *{
+    font-family: 'News Cycle', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+
+    /* Start Preloader */
+    .loader-bg {
+    position:fixed;
+    z-index:999999;
+    background:#fff;
+    width:100%;
+    height:100%;
+    }
+    .loader {
+    border:0 solid transparent;
+    border-radius:50%;
+    width:250px;
+    height:250px;
+    position:absolute;
+    top:calc(50vh - 200px);
+    left:calc(50vw - 126px);
+    }
+    .loader:after,
+    .loader:before {
+    content:'';
+    border:1em solid #c6414c;
+    border-radius:50%;
+    width:inherit;
+    height:inherit;
+    position:absolute;
+    top:0;
+    left:0;
+    animation:loader 2s linear infinite;
+    opacity:0;
+    }
+    .loader:before {
+    animation-delay:.5s
+    }@keyframes loader {
+    0% {
+    transform:scale(0);
+    opacity:0;
+    } 
+    50% {
+    opacity:1
+    }
+    100% {
+    transform:scale(1);opacity:0
+    }
+    }
+    /* End Preloader */
+    .Logo {
+    width: 200px;
+    }
+
+    a:hover {
+    color: #c6414c !important;
+    transition: all .4s ease;
+    }
+
+    .nav-item {
+    padding: 0px 20px;
+    }
+
+    .nav-link {
+    font-family: 'News Cycle', sans-serif;
+    }
+
+    .login-link {
+    background-color: #c6414c !important;
+    color: white !important;
+    border-radius: 50px !important;
+    width: 10%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'News Cycle', sans-serif;
+    }
+
+    .login-link:hover {
+    color: white !important;
+    }
+
+    body{
+    background-image: url("../Images/Form\ For\ R\ &\ D.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    }    
+
+    .btn{ 
+    background-color: #c6414c !important;
+    color: white !important;
+    padding: 14px 20px !important;
+    border: none !important;
+    cursor: pointer;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    border-radius: 8px !important;
+    margin-top: 27px !important;
+    }
+    form{
+    box-shadow: 0PX 0PX 9PX rgba(0, 0, 0, 26);
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 2em !important;
+    border-radius: 10px;
+    }
+    h1{
+    font-weight: bold;
+    font-size: 40px;
+    }
+    h2{
+    margin-top: 45px !important;
+    color: #c6414c;
+    }
+
+    form h6{
+    margin-bottom: 16px !important;
+    font-size: 30px;
+    font-family: 'News Cycle', sans-serif;
+    font-weight: bold;
+    color: #c6414c !important;
+    }  
+
+    input[type=text], 
+    input[type=password],
+    input[type=number] {
+    width: 92%;
+    margin-top: 3px !important;
+    padding-left: 15px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    display: inline-block;
+    border: none;
+    text-align: left;
+    outline: none;
+    }
+
+    b {
+    font-size: 17px !important;
+    color: rgb(191, 138, 138);
+    }
+
+    .form-select {
+    border: none !important;
+    width: 92% !important;
+    }
+
+    .btn:focus {
+    box-shadow: none !important;
+    }  
+
+    .form-select:focus {
+    border: none !important;
+    box-shadow: none !important;
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+
+    input/* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+    -moz-appearance: textfield;
+    }::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
+
+    @media (min-width: 425px) And (max-width: 450px){ 
+    body{
+    background: #f3f3f3 !important;
+    background-image: none;
+    } 
+    form{
+    width: 370PX;
+    height: 605px;
+    margin-top: 0px !important;
+    margin-bottom: 1rem !important;
+    margin-right: auto;
+    margin-left: auto;
+    }
+    h2{
+    font-size: 30px !important; 
+    text-align: center;
+    margin-bottom: 38px !important;
+    }
+    .btn{ 
+    width: 39%;
+    }
+    }
+
+    @media (min-width: 576px) { 
+    .login-link{
+    width: 20%;
+    }
+    body{
+    background: #f3f3f3 !important;
+    background-image: none;
+    } 
+    form{
+    width: 450PX;
+    height: 605px;
+    margin-top: 0px !important;
+    margin-bottom: 1rem !important;
+    margin-right: auto;
+    margin-left: auto;
+    }
+    h2{
+    font-size: 32px !important; 
+    text-align: center;
+    margin-bottom: 50px !important;
+    }
+    .btn{ 
+    width: 38%;
+    }
+    }
+
+    @media (min-width: 768px) { 
+    .login-link{
+    width: 20%;
+    }
+    body{
+    background: #f3f3f3 !important;
+    background-image: none;
+    } 
+    form{
+    width: 450PX;
+    height: 605px;
+    margin-top: 0px !important;
+    margin-bottom: 1rem !important;
+    margin-right: auto;
+    margin-left: auto;
+    }
+    h2{
+    font-size: 34px !important; 
+    text-align: center;
+    margin-bottom: 50px !important;
+    }
+    }
+
+    @media (min-width: 992px) { 
+    body{
+    background-image: url("../Images/Form\ For\ R\ &\ D.jpeg") !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    }                
+    .login-link{
+    width: 20%;
+    }
+    form{
+    width: 460px;
+    height: 605px;
+    margin-bottom: 0px !important;
+    margin-left: 52%; 
+    }
+    h2{
+    text-align: left !important;
+    font-size: 34px !important; 
+    margin-bottom: 0.5rem !important;
+    margin-left: 55px !important;
+    }
+    }
+
+    @media (min-width: 1200px) { 
+    .login-link{
+    width: 16%;
+    }
+    form{
+    width: 505PX;
+    height: 605px;
+    margin-left: 55%; 
+    border-radius: 10px;
+    }
+    h2{
+    font-size: 36px !important; 
+    margin-left: 150px !important;
+    }
+    }
+
+    @media (min-width: 1400px) {  
+    .login-link{
+    width: 14%;
+    }
+    h2{
+    font-size: 38px !important; 
+    margin-left: 250px !important;
+    }
+    .btn{ 
+    width: 35%;
+    }
+    }
